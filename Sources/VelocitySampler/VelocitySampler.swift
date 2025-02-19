@@ -1,6 +1,6 @@
 //
 //  VelocitySampler.swift
-//  Pique
+//  VelocitySampler
 //
 //  Created by Harlan Haskins on 2/18/25.
 //
@@ -133,7 +133,7 @@ public struct VelocitySampler {
     /// Adds a sample to the sampler, optionally at the provided time. Times must be monotonically
     /// increasing -- if a time comes before the last sample, it will be dropped.
     public mutating func addSample(_ point: CGPoint, at time: TimeInterval? = nil) {
-        addSample(Point3D(x: point.y, y: point.y, z: 0), at: time)
+        addSample(Point3D(x: point.x, y: point.y, z: 0), at: time)
     }
 
     /// Resets the sampler such that it can start tracking a new set of samples.
